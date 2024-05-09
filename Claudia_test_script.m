@@ -6,7 +6,7 @@ initCobraToolbox(false)
 discretized = discretize_FPKM(fpkm, colnames)
 
 % Load Recon3D, FASTCC, and other inputs
-load('/Users/jaydee/cobratoolbo/test/verifiedTests/visualization/Recon3D_301/Recon3DModel_301.mat') % Change to your path 
+load('recon3d path') % Change to your path 
 model = Recon3DModel
 A = fastcc_4_rfastcormics(model, 1e-4,0) % create consistent model by running FASTCC (Vlassis et al., 2014)
 Cmodel = removeRxns(model, model.rxns(setdiff(1:numel(model.rxns),A)))
